@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'core/theme/app_theme.dart';
 import 'features/auth/auth_providers.dart';
 import 'features/auth/login_page.dart';
 import 'features/home/home_page.dart';
@@ -16,7 +17,7 @@ class RhProApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'RH Pro',
-      theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo), useMaterial3: true),
+      theme: buildAppTheme(),
       home: const AuthGate(),
     );
   }
